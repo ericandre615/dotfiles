@@ -15,6 +15,9 @@ filetype off
 
 " Bundles
 " Bundle 'scrooloose/syntastic'
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'vim-airline/vim-airline'
+" Bundle 'airblade/vim-gitgutter'
 
 " All plugins before this ine
 " call vundle#end()
