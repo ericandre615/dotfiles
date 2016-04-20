@@ -1,15 +1,20 @@
 {
   // http://eslint.org/docs/rules/
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
 
   "ecmaFeatures": {
     "arrowFunctions": true,
+    "prefer-arrow-callback": true,
     "classes": false,
     "destructuring": true,
     "modules": true,
     "restParams": true,
     "spread": true,
     "superInFunctions": false,
-    "binaryLiterals": false,                    // enable binary literals
+    "binaryLiterals": true,                    // enable binary literals
     "blockBindings": true,                     // enable let and const (aka block bindings)
     "defaultParams": true,                     // enable default function parameters
     "forOf": true,                             // enable for-of loops
@@ -150,7 +155,7 @@
 
     ////////// Node.js //////////
 
-    "handle-callback-err": 0,   // enforces error handling in callbacks (off by default) (on by default in the node environment)
+    "handle-callback-err": 1,   // enforces error handling in callbacks (off by default) (on by default in the node environment)
     "no-mixed-requires": 0,     // disallow mixing regular variable and require declarations (off by default) (on by default in the node environment)
     "no-new-require": 0,        // disallow use of new operator with the require function (off by default) (on by default in the node environment)
     "no-path-concat": 0,        // disallow string concatenation with __dirname and __filename (off by default) (on by default in the node environment)
@@ -222,5 +227,5 @@
     "max-statements": 0,  // specify the maximum number of statement allowed in a function (off by default)
     "no-bitwise": 0,      // disallow use of bitwise operators (off by default)
     "no-plusplus": 0      // disallow use of unary operators, ++ and -- (off by default)
-  }
+  },
 }
