@@ -5,23 +5,22 @@ set backspace=2		" more powerful backspacing
 
 filetype off
 
-" Vundle
-" Set runtime path to Vundle
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle
-" Bundle 'VundleVim/Vundle.vim'
+Bundle 'VundleVim/Vundle.vim'
 
 " Bundles
-" Bundle 'scrooloose/syntastic'
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'vim-airline/vim-airline'
-" Bundle 'airblade/vim-gitgutter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-airline/vim-airline'
+Bundle 'airblade/vim-gitgutter'
 
 " All plugins before this ine
-" call vundle#end()
-" filetype plugin indent on
+call vundle#end()
+filetype plugin indent on
 
 " Allows you to have multiple buffers open
 set hidden
@@ -68,15 +67,20 @@ let mapleader=','
 " Show line numbers
 set number
 
+"colorscheme
+colorscheme dracula
+" hi SpellBad ctermbg=214 guibg=#ffaf00
+" hi SpellCap ctermbg=214 guibg=#ffaf00
+
 " Syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
-" let g:syntastic_javascript_checkers = ['jshint']
-" let g:syntastic_mode_map = {'mode': 'passive' }
+let g:syntastic_javascript_checkers = ['eslint', 'jshint'] 
+" let g:syntastic_mode_map = {'mode': 'passive'}
