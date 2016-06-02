@@ -66,6 +66,10 @@ set pastetoggle=<F2>
 let mapleader=','
 " Show line numbers
 set number
+" Show hidden characters
+set list
+" format for showing hidden characters
+set listchars=eol:$,tab:>>,space:.,trail:~
 
 "colorscheme
 colorscheme dracula
