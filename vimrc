@@ -17,6 +17,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-airline/vim-airline'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'ternjs/tern_for_vim'
+Bundle 'elixir-lang/vim-elixir'
 
 " All plugins before this ine
 call vundle#end()
@@ -88,3 +90,5 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint', 'jshint'] 
 " let g:syntastic_mode_map = {'mode': 'passive'}
+" autocmd FileType javascript let g:syntastic_javascript_checkers =
+autocmd FileType javascript let g:syntastic_javascript_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
