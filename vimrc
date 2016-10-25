@@ -18,6 +18,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-airline/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'ternjs/tern_for_vim'
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'elixir-lang/vim-elixir'
 
 " All plugins before this ine
@@ -70,6 +71,8 @@ let mapleader=','
 set number
 " Show hidden characters
 set list
+" Paste properly without adding extra indentation
+set paste
 " format for showing hidden characters
 set listchars=eol:$,tab:>>,space:.,trail:~
 
