@@ -75,6 +75,21 @@ set list
 set paste
 " format for showing hidden characters
 set listchars=eol:$,tab:>>,space:.,trail:~
+" Enable list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" To open a new empty buffer
+nmap <leader>T :enew<cr>
+"Move to next buffer
+nmap <leader>l :bnext<CR>
+" move to previous buffer
+nmap <leader>h :bprevious<CR>
+" close current buffer and move to previous one
+nmap <leader>bq :bp <BAR> bd #<CR>
+" show all open buffers
+nmap <leader>bl :ls<CR>
 
 "colorscheme
 colorscheme dracula
@@ -91,7 +106,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_javascript_checkers = ['eslint', 'jshint'] 
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 " let g:syntastic_mode_map = {'mode': 'passive'}
 " autocmd FileType javascript let g:syntastic_javascript_checkers =
 autocmd FileType javascript let g:syntastic_javascript_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
