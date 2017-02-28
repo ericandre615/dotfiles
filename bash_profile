@@ -26,8 +26,11 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias startes6="git clone https://github.com/ericandre615/es6starter.git"
 #alias glog='git log --oneline --graph --decorate'
 
-# NPM 
+# NPM
 alias nls="npm list --depth=0"
+
+# Docker
+alias docker-delete="docker images -qf dangling=true | xargs docker rmi"
 
 # SSH
 alias apiserver="ssh eandre@ivlapi01d"
