@@ -12,6 +12,10 @@ alias lsa='ls -al'
 alias showall='defaults write com.apple.finder AppleShowAllFiles YES'
 alias hideall='defaults write com.apple.finder AppleShowAllFiles NO'
 
+# Command History
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 # GIT
 source ~/git-completion.bash
 source ~/git-prompt.sh
