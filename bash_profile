@@ -48,6 +48,8 @@ alias corpserver="ssh -i ~/.ssh/aws-ivl.key ec2-user@ivlcorp"
 # Other
 alias eslintme="cp ~/Development/dotfiles/eslintrc ./.eslintrc"
 alias econfme="cp ~/Development/dotfiles/.editorconfig ./.editorconfig"
+alias weather="curl -i wttr.in"
+
 #TERM
 BLACK="\[$(tput setaf 0)\]"
 RED="\[$(tput setaf 1)\]"
