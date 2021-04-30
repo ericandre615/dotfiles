@@ -1,7 +1,7 @@
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
+set nocompatible " Use Vim defaults instead of 100% vi compatibility
+set backspace=2 " more powerful backspacing
 
 filetype off
 
@@ -20,6 +20,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'ternjs/tern_for_vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'rust-lang/rust.vim'
 
 " All plugins before this ine
 call vundle#end()
@@ -80,6 +81,13 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+" Tree Explorer Settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
 " To open a new empty buffer
 nmap <leader>T :enew<cr>
 "Move to next buffer
@@ -92,7 +100,9 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
 "colorscheme
+
 colorscheme dracula
+
 " hi SpellBad ctermbg=214 guibg=#ffaf00
 " hi SpellCap ctermbg=214 guibg=#ffaf00
 
